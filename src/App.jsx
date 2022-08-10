@@ -1,11 +1,10 @@
 
-// import reactLogo from './assets/react.svg'
 import './App.css'
 import React, { useState, useEffect, useRef } from "react"
 import Question from "./components/Question"
 import Timer from "./components/Timer"
-import YellowBlob from "./assets/yellow-blob.svg"
-import BlueBlob from "./assets/blue-blob.svg"
+import yellowBlob from "./assets/yellow-blob.svg"
+import blueBlob from "./assets/blue-blob.svg"
 
 export default function App() {
 
@@ -28,8 +27,8 @@ export default function App() {
 
   const [score, setScore] = useState(0)
   const defaultTimeLeft = {
-    minutes: 0,
-    seconds: 15
+    minutes: 3,
+    seconds: 0
   }
   const [timeLeft, setTimeLeft] = useState(defaultTimeLeft)
 
@@ -165,8 +164,8 @@ export default function App() {
               <button className="check" onClick={handleCheckAnswers}>Check answers</button>}
           </form> :
           <div className="intro-page">
-            <img className="yellow-blob" src={YellowBlob} />
-            <img className="blue-blob" src={BlueBlob} />
+            <img className="yellow-blob" src={yellowBlob} />
+            <img className="blue-blob" src={blueBlob} />
             <h1>Quizzical</h1>
             <form className="difficulty">
               <h1>Select Difficulty</h1>
