@@ -7,7 +7,7 @@ import yellowBlob from "./assets/yellow-blob.svg"
 import blueBlob from "./assets/blue-blob.svg"
 
 export default function App() {
-
+  console.log("rendered")
   const [playing, setPlaying] = useState(false)
   const [difficulty, setDifficulty] = useState("easy")
   const [showAnswers, setShowAnswers] = useState(false)
@@ -65,8 +65,8 @@ export default function App() {
     userAnswersRef.current = userAnswers
   }
 
-  function handleDifficultyChange() {
-    const { value, checked } = event.target
+  function handleDifficultyChange(event) {
+    const { value } = event.target
     setDifficulty(value)
   }
 
