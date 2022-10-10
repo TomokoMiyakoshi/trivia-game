@@ -7,7 +7,13 @@ This trivia game was created as part of one of Scrimba's React course's solo pro
 Clone the repository
 
 ```bash
-git clone https://github.com/TomokoMiyakoshi/egyptian-ratscrew-game.git
+git clone https://github.com/TomokoMiyakoshi/trivia-game.git
+```
+
+Change into the repository directory
+
+```bash
+cd trivia-game
 ```
 
 Install required npm packages
