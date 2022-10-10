@@ -7,7 +7,7 @@ import yellowBlob from "./assets/yellow-blob.svg"
 import blueBlob from "./assets/blue-blob.svg"
 
 export default function App() {
-  console.log("rendered")
+
   const [playing, setPlaying] = useState(false)
   const [difficulty, setDifficulty] = useState("easy")
   const [showAnswers, setShowAnswers] = useState(false)
@@ -26,6 +26,7 @@ export default function App() {
   }, [questions])
 
   const [score, setScore] = useState(0)
+
   const defaultTimeLeft = {
     minutes: 3,
     seconds: 0
@@ -57,7 +58,7 @@ export default function App() {
   }, [playing])
 
   function handleAnswerChange(event) {
-    const { name, value, checked } = event.target
+    const { name, value } = event.target
     setUserAnswers(prevAnswers => ({
       ...prevAnswers,
       [name]: value
@@ -69,7 +70,6 @@ export default function App() {
     const { value } = event.target
     setDifficulty(value)
   }
-
 
   useEffect(() => {
     // fetch questions after difficulty is selected/changed, not after start game is clicked
@@ -107,8 +107,12 @@ export default function App() {
 
   function startGame(event) {
     event.preventDefault()
-    setTimeLeft(defaultTimeLeft)
-    setPlaying(true)
+    // add delay to ensure new questions are loaded before rendering
+    setTimeout(() => {
+      setTimeLeft(defaultTimeLeft)
+      setPlaying(true)
+    }, 300)
+    
   }
 
 
