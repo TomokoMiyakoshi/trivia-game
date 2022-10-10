@@ -1,4 +1,4 @@
-# Trivia game
+# Quizzical
 
 This trivia game was created as part of one of Scrimba's React course's solo projects. It has been extended to include a time limit and allow users to select a difficulty. The questions and answers come from the Open Trivia Database API.
 
