@@ -111,7 +111,7 @@ export default function App() {
     setTimeout(() => {
       setTimeLeft(defaultTimeLeft)
       setPlaying(true)
-    }, 300)
+    }, 400)
     
   }
 
